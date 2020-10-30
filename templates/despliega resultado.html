@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Piedra, papel y tijeras!</title>
+        <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1; charset=utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Impact">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+          html,body,i,h1,h2,h3,h4,h5,h6 {
+          font-family: "Impact";
+          }
+        </style>
+    </head>
+    <body class="w3-container w3-deep-purple">
+        <div class="w3-bar w3-black w3-round-large">
+          <div class="w3-bar-item w3-light-blue"><h1>Piedra, papel, tijeras .... lagarto y spock!</h1></div>
+        </div>
+        <p>
+            <ul>
+                <li>Tiro jugador = {{tiro_jugador}}</li>
+                <li>Tiro sheldon = {{tiro_sheldon}}</li>
+            </ul>
+        </p>
+        <div class="w3-row">
+          <div class="w3-container w3-half">
+            <h1 class="w3-animate-zoom">
+                <em>¡{{mensaje}}!</em>
+            </h1>
+            <p>
+                {% if resultado == 1 %}
+                    <h1>¡Victoria!</h1>
+                    <img src="/static/feliz1.jpg" width="350"/>
+                {% elif resultado == -1 %}
+                    <h1>¡Derrota!</h1>
+                    <img src="/static/triste1.jpg" width="600"/>
+                {% else %}
+                    <img src="/static/neutral1.jpg" width="550"/>
+                {% endif %}
+            </p>
+          </div>
+          <div class="w3-container w3-half">
+            <p>
+                {% if resultado == 1 %}
+                <blockquote class="w3-panel w3-leftbar w3-white w3-round-large">
+                  <p class="w3-xlarge w3-serif">
+                    <i>"Cuando entiendes las leyes de la física, todo es posible".</i></p>
+                  <p class="w3-right-align">-- Sheldon Cooper</p>
+                </blockquote>
+                {% elif resultado == -1 %}
+                <blockquote class="w3-panel w3-leftbar w3-white w3-round-large">
+                  <p class="w3-xlarge w3-serif">
+                    <i>"Perdona, como sabes, no soy muy bueno leyendo las expresiones faciales, pero esta vez voy a arriesgarme: o estás triste, o tienes náuseas".</i></p>
+                  <p class="w3-right-align">-- Sheldon Cooper</p>
+                </blockquote>
+                {% else %}
+                <blockquote class="w3-panel w3-leftbar w3-white w3-round-large">
+                  <p class="w3-xlarge w3-serif">
+                    <i>"..."</i></p>
+                  <p class="w3-right-align">-- Sheldon Cooper</p>
+                </blockquote>
+                {% endif %}
+            </p>
+            <div class="w3-container w3-right-align">
+                <p>
+                    <a href = '/' class="w3-button w3-round-large w3-amber">Volver a jugar</a>
+                </p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
