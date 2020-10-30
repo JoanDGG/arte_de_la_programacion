@@ -4,5 +4,10 @@
 
 Autores:
 
-A0135150  Abraham Emmanuel Bautista Monsreal
-A01378052  Joan Daniel Guerrero Garcia
+A01351650  Abraham Emmanuel Bautista Monsreal
+
+A01378052  Joan Daniel Guerrero García
+
+Para correr:
+
+    bash run.sh
